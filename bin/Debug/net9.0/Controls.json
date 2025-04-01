@@ -1,0 +1,9 @@
+{
+    "MoveLeft": "LeftArrow",
+    "MoveRight": "RightArrow",
+    "Rotate": "UpArrow",
+    "Drop": "DownArrow",
+    "Start": "Enter",
+    "Player1": "A",
+    "Player2": "L"
+}

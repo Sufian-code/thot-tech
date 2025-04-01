@@ -1,0 +1,9 @@
+{
+    "MoveLeft": "LeftKey",
+    "MoveRight": "RightKey",
+    "Rotate": "UpKey",
+    "Drop": "DownKey",
+    "Start": "ReturnKey",
+    "Player1": "AKey",
+    "Player2": "LKey"
+}

@@ -1,0 +1,14 @@
+/Users/macbzook/Desktop/GameCotroller/bin/Debug/net9.0/GameCotroller
+/Users/macbzook/Desktop/GameCotroller/bin/Debug/net9.0/GameCotroller.deps.json
+/Users/macbzook/Desktop/GameCotroller/bin/Debug/net9.0/GameCotroller.runtimeconfig.json
+/Users/macbzook/Desktop/GameCotroller/bin/Debug/net9.0/GameCotroller.dll
+/Users/macbzook/Desktop/GameCotroller/bin/Debug/net9.0/GameCotroller.pdb
+/Users/macbzook/Desktop/GameCotroller/obj/Debug/net9.0/GameCotroller.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbzook/Desktop/GameCotroller/obj/Debug/net9.0/GameCotroller.AssemblyInfoInputs.cache
+/Users/macbzook/Desktop/GameCotroller/obj/Debug/net9.0/GameCotroller.AssemblyInfo.cs
+/Users/macbzook/Desktop/GameCotroller/obj/Debug/net9.0/GameCotroller.csproj.CoreCompileInputs.cache
+/Users/macbzook/Desktop/GameCotroller/obj/Debug/net9.0/GameCotroller.dll
+/Users/macbzook/Desktop/GameCotroller/obj/Debug/net9.0/refint/GameCotroller.dll
+/Users/macbzook/Desktop/GameCotroller/obj/Debug/net9.0/GameCotroller.pdb
+/Users/macbzook/Desktop/GameCotroller/obj/Debug/net9.0/GameCotroller.genruntimeconfig.cache
+/Users/macbzook/Desktop/GameCotroller/obj/Debug/net9.0/ref/GameCotroller.dll
