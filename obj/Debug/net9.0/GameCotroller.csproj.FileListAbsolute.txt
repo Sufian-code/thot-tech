@@ -12,3 +12,4 @@
 /Users/macbzook/Desktop/GameCotroller/obj/Debug/net9.0/GameCotroller.pdb
 /Users/macbzook/Desktop/GameCotroller/obj/Debug/net9.0/GameCotroller.genruntimeconfig.cache
 /Users/macbzook/Desktop/GameCotroller/obj/Debug/net9.0/ref/GameCotroller.dll
+/Users/macbzook/Desktop/GameCotroller/obj/Debug/net9.0/GameCotroller.sourcelink.json

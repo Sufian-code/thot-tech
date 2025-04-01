@@ -6,21 +6,35 @@ public class Game
 {
     private List<Block> _blocks = new List<Block>();
     private Controls _controls;
+    private SplashKitSDK.Timer _gameTimer; // Explicitly specify SplashKitSDK.Timer
+    private double _lastDropTime;
+    private const double NormalDropInterval = 500; // 500ms per drop
+    private const double FastDropInterval = 100;   // 100ms per drop when holding Down
 
     public Game()
     {
-        _controls = new Controls(); // Initialize controls
-        SpawnNewBlocks(); // Initialize first blocks
+        _controls = new Controls();
+        _gameTimer = new SplashKitSDK.Timer("GameTimer"); // Explicitly use SplashKitSDK.Timer
+        _gameTimer.Start();
+        SpawnNewBlocks();
+        _lastDropTime = _gameTimer.Ticks;
+    }
+
+    private void SpawnNewBlocks()
+    {
+        _blocks.Clear();
+        _blocks.Add(new Block(200, 0, Color.Red));
+        _blocks.Add(new Block(220, 0, Color.Blue));
     }
 
     public void HandleInput()
     {
-        if (SplashKit.KeyDown(_controls.KeyLookup("MoveLeft")))
+        if (SplashKit.KeyTyped(_controls.KeyLookup("MoveLeft")))
         {
             foreach (var block in _blocks) block.MoveLeft();
         }
 
-        if (SplashKit.KeyDown(_controls.KeyLookup("MoveRight")))
+        if (SplashKit.KeyTyped(_controls.KeyLookup("MoveRight")))
         {
             foreach (var block in _blocks) block.MoveRight();
         }
@@ -29,18 +43,13 @@ public class Game
         {
             foreach (var block in _blocks) block.Rotate();
         }
-
-        if (SplashKit.KeyDown(_controls.KeyLookup("Drop")))
-        {
-            foreach (var block in _blocks) block.Drop();
-        }
     }
 
     private bool HasBlockLanded()
     {
         foreach (var block in _blocks)
         {
-            if (block.Y >= SplashKit.ScreenHeight() - block.Height) // Ensure Block has a Height property
+            if (block.Y >= SplashKit.ScreenHeight() - block.Height)
             {
                 return true;
             }
@@ -48,23 +57,20 @@ public class Game
         return false;
     }
 
-    private void SpawnNewBlocks()
-    {
-        _blocks.Clear(); // Remove old blocks
-
-        // Create new block pair at the top
-        _blocks.Add(new Block(200, 0, Color.Red));
-        _blocks.Add(new Block(220, 0, Color.Blue));
-    }
-
     public void Update()
     {
         HandleInput();
 
-        // Move blocks down
-        foreach (var block in _blocks) block.Drop();
+        // Get current time in milliseconds
+        double currentTime = _gameTimer.Ticks;
+        double dropInterval = SplashKit.KeyDown(_controls.KeyLookup("Drop")) ? FastDropInterval : NormalDropInterval;
 
-        // Respawn new blocks when landed
+        if (currentTime - _lastDropTime >= dropInterval)
+        {
+            foreach (var block in _blocks) block.Drop();
+            _lastDropTime = currentTime;
+        }
+
         if (HasBlockLanded())
         {
             SpawnNewBlocks();

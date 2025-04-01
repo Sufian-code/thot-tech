@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameCotroller")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b0c57cfa9d7972c4bf8095f6687f9a647035a5f")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameCotroller")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameCotroller")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
